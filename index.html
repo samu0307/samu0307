@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> JAVA</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Relative positioning for floating elements */
+  }
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .header h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: blink 1s infinite alternate;
+  }
+  .header .site-name {
+    color: #ff7e00; /* Blue color */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .main-section {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .main-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-out;
+  }
+  .main-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    animation: slideInUp 1s ease-out;
+  }
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+  }
+  .button-container {
+    margin-top: 30px;
+  }
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e00;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .button-container button:hover {
+    background-color: #ff9500;
+    transform: scale(1.05);
+  }
+  /* Floating elements */
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite alternate;
+    opacity: 0.6;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>JAVA <span class="site-name">PROGRAMING</span></h1>
+  </div>
+  <div class="main-section">
+    <p>JAVA</p>
+    <p>JAVA PROGRAMING QUESTIONS</p>
+    <div class="button-container">
+      
+      <button onclick="href='C:\Users\Samdarsh\Desktop\JAVA'">
+      <button onclick="href='C:\Users\Samdarsh\Desktop\JAVA'">
+      <button onclick="location.href='1D array.html'">1D array</button>
+      <button onclick="location.href='Java Connectivity with mysql.html'">Java Connectivity with mysql</button>
+	<button onclick="location.href='Java Basics.html'">Java Basics</button>
+	<button onclick="location.href='Multithreading.html'">Multithreading</button>
+	<button onclick="location.href='Functions.html'">Functions</button>
+	<button onclick="location.href='OOPs.html'">OOPs</button>
+      <button onclick="href='C:\Users\Samdarsh\Desktop\JAVA'">
+      <button onclick="href='C:\Users\Samdarsh\Desktop\JAVA'">
+    </div>
+  </div>
+  <div class="footer">
+    <p>Samdarsh</p>
+    <p>4273/22</p>
+    <p> BCA "5th Sem"</p>  
+</div>
+
+</body>
+</html>

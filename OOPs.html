@@ -1,0 +1,978 @@
+<!DOCTYPE html><title>OOPs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        .exercise {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .exercise h2 {
+            color: #007bff;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .output {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <h1>OOPS</h1>
+
+
+<h1>Java Programming Exercises</h1>
+
+<div class="exercise">
+    <h2>1. Write a Java program to create a class called "Person" with a name and age attribute.</h2> 
+    <pre><code>class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("Alice", 30);
+        Person person2 = new Person("Bob", 25);
+        person1.displayInfo();
+        person2.displayInfo();
+    }
+}</code></pre> 
+    <p class="output">Output: Name: Alice, Age: 30; Name: Bob, Age: 25</p> 
+</div>
+
+<div class="exercise">
+    <h2>2. Write a Java program to create a class called "Dog" with a name and breed attribute.</h2> 
+    <pre><code>class Dog {
+    private String name;
+    private String breed;
+
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public void displayInfo() {
+        System.out.println("Dog Name: " + name + ", Breed: " + breed);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Buddy", "Golden Retriever");
+        Dog dog2 = new Dog("Max", "Beagle");
+        dog1.setName("Charlie");
+        dog1.setBreed("Labrador");
+        dog1.displayInfo();
+        dog2.displayInfo();
+    }
+}</code></pre> 
+    <p class="output">Output: Dog Name: Charlie, Breed: Labrador; Dog Name: Max, Breed: Beagle</p> 
+</div>
+
+<div class="exercise">
+    <h2>3. Write a Java program to create a class called "Rectangle" with width and height attributes.</h2> 
+    <pre><code>class Rectangle {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double calculateArea() {
+        return width * height;
+    }
+
+    public double calculatePerimeter() {
+        return 2 * (width + height);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("Area: " + rectangle.calculateArea());
+        System.out.println("Perimeter: " + rectangle.calculatePerimeter());
+    }
+}</code></pre> 
+    <p class="output">Output: Area: 50.0; Perimeter: 30.0</p> 
+</div>
+
+<div class="exercise">
+    <h2>4. Write a Java program to create a class called "Circle" with a radius attribute.</h2> 
+    <pre><code>class Circle {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public double calculateCircumference() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        System.out.println("Area: " + circle.calculateArea());
+        System.out.println("Circumference: " + circle.calculateCircumference());
+    }
+}</code></pre> 
+    <p class="output">Output: Area: 78.53981633974483; Circumference: 31.41592653589793</p> 
+</div>
+
+<div class="exercise">
+    <h2>5. Write a Java program to create a class called "Book" with attributes for title, author, and ISBN.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Book {
+    private String title;
+    private String author;
+    private String isbn;
+
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+}
+
+class Library {
+    private ArrayList books = new ArrayList&lt;&gt;();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void removeBook(Book book) {
+        books.remove(book);
+    }
+
+    public void displayBooks() {
+        for (Book book : books) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        Book book1 = new Book("1984", "George Orwell", "123456789");
+        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee", "987654321");
+        
+        library.addBook(book1);
+        library.addBook(book2);
+        library.displayBooks();
+    }
+}</code></pre> 
+    <p class="output">Output: Title: 1984, Author: George Orwell; Title: To Kill a Mockingbird, Author: Harper Lee</p> 
+</div>
+
+<div class="exercise">
+    <h2>6. Write a Java program to create a class called "Employee" with a name, job title, and salary attributes.</h2> 
+    <pre><code>class Employee {
+        private String name;
+        private String jobTitle;
+        private double salary;
+
+        public Employee(String name, String jobTitle, double salary) {
+            this.name = name;
+            this.jobTitle = jobTitle;
+            this.salary = salary;
+        }
+
+        public void updateSalary(double amount) {
+            this.salary += amount;
+        }
+
+        public void displayInfo() {
+            System.out.println("Name: " + name + ", Job Title: " + jobTitle + ", Salary: " + salary);
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Employee employee1 = new Employee("Alice", "Developer", 60000);
+            employee1.updateSalary(5000);
+            employee1.displayInfo();
+        }
+    }</code></pre> 
+    <p class="output">Output: Name: Alice, Job Title: Developer, Salary: 65000.0</p> 
+</div>
+
+<div class="exercise">
+    <h2>7. Write a Java program to create a class called "Bank" with a collection of accounts.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Account {
+    private String accountNumber;
+    private double balance;
+
+    public Account(String accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = 0;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (amount &lt;= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient funds.");
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+class Bank {
+    private ArrayList accounts = new ArrayList&lt;&gt;();
+
+    public void addAccount(Account account) {
+        accounts.add(account);
+    }
+
+    public void displayAccounts() {
+        for (Account account : accounts) {
+            System.out.println("Account Number: " + account.accountNumber + ", Balance: " + account.getBalance());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bank bank = new Bank();
+        Account account1 = new Account("001");
+        Account account2 = new Account("002");
+        
+        account1.deposit(1000);
+        account2.deposit(2000);
+        
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+        bank.displayAccounts();
+    }
+}</code></pre> 
+    <p class="output">Output: Account Number: 001, Balance: 1000.0; Account Number: 002, Balance: 2000.0</p> 
+</div>
+
+<div class="exercise">
+    <h2>8. Write a Java program to create a class called "TrafficLight" with attributes for color and duration.</h2> 
+    <pre><code>class TrafficLight {
+        private String color;
+        private int duration; // in seconds
+
+        public TrafficLight(String color, int duration) {
+            this.color = color;
+            this.duration = duration;
+        }
+
+        public void changeColor(String newColor) {
+            color = newColor;
+        }
+
+        public boolean isRed() {
+            return color.equalsIgnoreCase("red");
+        }
+
+        public boolean isGreen() {
+            return color.equalsIgnoreCase("green");
+        }
+
+        public void displayInfo() {
+            System.out.println("Color: " + color + ", Duration: " + duration + " seconds");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            TrafficLight light = new TrafficLight("red", 30);
+            light.displayInfo();
+            light.changeColor("green");
+            light.displayInfo();
+        }
+    }</code></pre> 
+    <p class="output">Output: Color: red, Duration: 30 seconds; Color: green, Duration: 30 seconds</p> 
+</div>
+
+<div class="exercise">
+    <h2>9. Write a Java program to create a class called "Employee" with a method to calculate years of service.</h2> 
+    <pre><code>import java.time.LocalDate;
+
+class Employee {
+    private String name;
+    private LocalDate hireDate;
+
+    public Employee(String name, LocalDate hireDate) {
+        this.name = name;
+        this.hireDate = hireDate;
+    }
+
+    public int calculateYearsOfService() {
+        return LocalDate.now().getYear() - hireDate.getYear();
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", Years of Service: " + calculateYearsOfService());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee employee = new Employee("Alice", LocalDate.of(2015, 5, 15));
+        employee.displayInfo();
+    }
+}</code></pre> 
+    <p class="output">Output: Name: Alice, Years of Service: 9</p> 
+</div>
+
+<div class="exercise">
+    <h2>10. Write a Java program to create a class called "Student" with methods to add and remove courses.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Student {
+    private String name;
+    private ArrayList courses;
+
+    public Student(String name) {
+        this.name = name;
+        this.courses = new ArrayList&lt;&gt;();
+    }
+
+    public void addCourse(String course) {
+        courses.add(course);
+    }
+
+    public void removeCourse(String course) {
+        courses.remove(course);
+    }
+
+    public void displayCourses() {
+        System.out.println("Courses for " + name + ": " + courses);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student("Alice");
+        student.addCourse("Math");
+        student.addCourse("Science");
+        student.removeCourse("Math");
+        student.displayCourses();
+    }
+}</code></pre> 
+    <p class="output">Output: Courses for Alice: [Science]</p> 
+</div>
+
+<div class="exercise">
+    <h2>11. Write a Java program to create a class called "Library" with a collection of books.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+}
+
+class Library {
+    private ArrayList books;
+
+    public Library() {
+        books = new ArrayList&lt;&gt;();
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void displayBooks() {
+        for (Book book : books) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        library.addBook(new Book("1984", "George Orwell"));
+        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee"));
+        library.displayBooks();
+    }
+}</code></pre> 
+    <p class="output">Output: Title: 1984, Author: George Orwell; Title: To Kill a Mockingbird, Author: Harper Lee</p> 
+</div>
+
+<div class="exercise">
+    <h2>12. Write a Java program to create a class called "Airplane" with flight attributes.</h2> 
+    <pre><code>class Airplane {
+        private String flightNumber;
+        private String destination;
+        private String departureTime;
+
+        public Airplane(String flightNumber, String destination, String departureTime) {
+            this.flightNumber = flightNumber;
+            this.destination = destination;
+            this.departureTime = departureTime;
+        }
+
+        public void checkFlightStatus() {
+            System.out.println("Flight " + flightNumber + " to " + destination + " departs at " + departureTime);
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Airplane airplane = new Airplane("AA123", "New York", "10:00 AM");
+            airplane.checkFlightStatus();
+        }
+    }</code></pre> 
+    <p class="output">Output: Flight AA123 to New York departs at 10:00 AM</p> 
+</div>
+
+<div class="exercise">
+    <h2>13. Write a Java program to create a class called "Inventory" with a collection of products.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Product {
+    private String name;
+    private int quantity;
+
+    public Product(String name, int quantity) {
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+}
+
+class Inventory {
+    private ArrayList<product> products;
+
+    public Inventory() {
+        products = new ArrayList&lt;&gt;();
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void displayInventory() {
+        for (Product product : products) {
+            System.out.println("Product: " + product.getName() + ", Quantity: " + product.getQuantity());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Inventory inventory = new Inventory();
+        inventory.addProduct(new Product("Laptop", 10));
+        inventory.addProduct(new Product("Phone", 20));
+        inventory.displayInventory();
+    }
+}
+</product></code></pre> 
+    <p class="output">Output: Product: Laptop, Quantity: 10; Product: Phone, Quantity: 20</p> 
+</div>
+
+<div class="exercise">
+    <h2>14. Write a Java program to create a class called "School" with attributes for students, teachers, and classes.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class School {
+    private ArrayList<string> students;
+    private ArrayList<string> teachers;
+
+    public School() {
+        students = new ArrayList&lt;&gt;();
+        teachers = new ArrayList&lt;&gt;();
+    }
+
+    public void addStudent(String student) {
+        students.add(student);
+    }
+
+    public void addTeacher(String teacher) {
+        teachers.add(teacher);
+    }
+
+    public void displayInfo() {
+        System.out.println("Students: " + students);
+        System.out.println("Teachers: " + teachers);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        School school = new School();
+        school.addStudent("Alice");
+        school.addStudent("Bob");
+        school.addTeacher("Mr. Smith");
+        school.displayInfo();
+    }
+}
+</string></string></code></pre> 
+    <p class="output">Output: Students: [Alice, Bob]; Teachers: [Mr. Smith]</p> 
+</div>
+
+<div class="exercise">
+    <h2>15. Write a Java program to create a class called "MusicLibrary" with a collection of songs.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Song {
+    private String title;
+    private String artist;
+
+    public Song(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+}
+
+class MusicLibrary {
+    private ArrayList<song> songs;
+
+    public MusicLibrary() {
+        songs = new ArrayList&lt;&gt;();
+    }
+
+    public void addSong(Song song) {
+        songs.add(song);
+    }
+
+    public void playRandomSong() {
+        if (!songs.isEmpty()) {
+            int randomIndex = (int) (Math.random() * songs.size());
+            Song randomSong = songs.get(randomIndex);
+            System.out.println("Playing: " + randomSong.getTitle() + " by " + randomSong.getArtist());
+        } else {
+            System.out.println("No songs in the library.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MusicLibrary library = new MusicLibrary();
+        library.addSong(new Song("Shape of You", "Ed Sheeran"));
+        library.addSong(new Song("Blinding Lights", "The Weeknd"));
+        library.playRandomSong();
+    }
+}
+</song></code></pre> 
+    <p class="output">Output: Playing: Shape of You by Ed Sheeran (or another song randomly)</p> 
+</div>
+
+<div class="exercise">
+    <h2>16. Write a Java program to create a class called "Shape" with abstract methods for area and perimeter.</h2> 
+    <pre><code>abstract class Shape {
+    abstract double calculateArea();
+    abstract double calculatePerimeter();
+}
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    double calculateArea() {
+        return width * height;
+    }
+
+    @Override
+    double calculatePerimeter() {
+        return 2 * (width + height);
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle(4, 5);
+        Shape circle = new Circle(3);
+        
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Circle Area: " + circle.calculateArea());
+    }
+}
+</code></pre> 
+    <p class="output">Output: Rectangle Area: 20.0; Circle Area: 28.274333882308138</p> 
+</div>
+
+<div class="exercise">
+    <h2>17. Write a Java program to create a class called "Movie" with attributes for title and reviews.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Movie {
+    private String title;
+    private ArrayList<string> reviews;
+
+    public Movie(String title) {
+        this.title = title;
+        this.reviews = new ArrayList&lt;&gt;();
+    }
+
+    public void addReview(String review) {
+        reviews.add(review);
+    }
+
+    public void displayReviews() {
+        System.out.println("Reviews for " + title + ": " + reviews);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Movie movie = new Movie("Inception");
+        movie.addReview("Amazing!");
+        movie.addReview("A mind-bending thriller.");
+        movie.displayReviews();
+    }
+}
+</string></code></pre> 
+    <p class="output">Output: Reviews for Inception: [Amazing!, A mind-bending thriller.]</p> 
+</div>
+
+<div class="exercise">
+    <h2>18. Write a Java program to create a class called "Restaurant" with attributes for menu items and ratings.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class MenuItem {
+    private String name;
+    private double price;
+
+    public MenuItem(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+
+class Restaurant {
+    private ArrayList<menuitem> menu;
+    private ArrayList<double> ratings;
+
+    public Restaurant() {
+        menu = new ArrayList&lt;&gt;();
+        ratings = new ArrayList&lt;&gt;();
+    }
+
+    public void addMenuItem(MenuItem item) {
+        menu.add(item);
+    }
+
+    public void addRating(double rating) {
+        ratings.add(rating);
+    }
+
+    public double calculateAverageRating() {
+        double sum = 0;
+        for (double rating : ratings) {
+            sum += rating;
+        }
+        return sum / ratings.size();
+    }
+
+    public void displayMenu() {
+        for (MenuItem item : menu) {
+            System.out.println("Menu Item: " + item.getName() + ", Price: " + item.getPrice());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Restaurant restaurant = new Restaurant();
+        restaurant.addMenuItem(new MenuItem("Burger", 5.99));
+        restaurant.addMenuItem(new MenuItem("Pizza", 8.99));
+        restaurant.addRating(4.5);
+        restaurant.addRating(5.0);
+        
+        restaurant.displayMenu();
+        System.out.println("Average Rating: " + restaurant.calculateAverageRating());
+    }
+}
+</double></menuitem></code></pre> 
+    <p class="output">Output: Menu Item: Burger, Price: 5.99; Menu Item: Pizza, Price: 8.99; Average Rating: 4.75</p> 
+</div>
+
+<div class="exercise">
+    <h2>19. Write a Java program to create a class with methods to search for flights and hotels.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Flight {
+    private String flightNumber;
+    private String destination;
+
+    public Flight(String flightNumber, String destination) {
+        this.flightNumber = flightNumber;
+        this.destination = destination;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+}
+
+class Hotel {
+    private String name;
+    private double pricePerNight;
+
+    public Hotel(String name, double pricePerNight) {
+        this.name = name;
+        this.pricePerNight = pricePerNight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
+}
+
+class TravelAgency {
+    private ArrayList<flight> flights;
+    private ArrayList<hotel> hotels;
+
+    public TravelAgency() {
+        flights = new ArrayList&lt;&gt;();
+        hotels = new ArrayList&lt;&gt;();
+    }
+
+    public void addFlight(Flight flight) {
+        flights.add(flight);
+    }
+
+    public void addHotel(Hotel hotel) {
+        hotels.add(hotel);
+    }
+
+    public void searchFlights(String destination) {
+        System.out.println("Available flights to " + destination + ":");
+        for (Flight flight : flights) {
+            if (flight.getDestination().equals(destination)) {
+                System.out.println("Flight Number: " + flight.getFlightNumber());
+            }
+        }
+    }
+
+    public void searchHotels(double maxPrice) {
+        System.out.println("Available hotels under $" + maxPrice + ":");
+        for (Hotel hotel : hotels) {
+            if (hotel.getPricePerNight() &lt;= maxPrice) {
+                System.out.println("Hotel Name: " + hotel.getName() + ", Price per Night: " + hotel.getPricePerNight());
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TravelAgency agency = new TravelAgency();
+        agency.addFlight(new Flight("AB123", "New York"));
+        agency.addFlight(new Flight("CD456", "Los Angeles"));
+        agency.addHotel(new Hotel("Hotel California", 120.00));
+        agency.addHotel(new Hotel("The Grand", 150.00));
+        
+        agency.searchFlights("New York");
+        agency.searchHotels(130.00);
+    }
+}
+</hotel></flight></code></pre> 
+    <p class="output">Output: Available flights to New York: Flight Number: AB123; Available hotels under $130.0: Hotel Name: Hotel California, Price per Night: 120.0</p> 
+</div>
+
+<div class="exercise">
+    <h2>20. Write a Java program to create a class called "Library" with attributes for books and members.</h2> 
+    <pre><code>import java.util.ArrayList;
+
+class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+}
+
+class Member {
+    private String name;
+
+    public Member(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Library {
+    private ArrayList<book> books;
+    private ArrayList<member> members;
+
+    public Library() {
+        books = new ArrayList&lt;&gt;();
+        members = new ArrayList&lt;&gt;();
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void addMember(Member member) {
+        members.add(member);
+    }
+
+    public void displayBooks() {
+        System.out.println("Books in the library:");
+        for (Book book : books) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor());
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        library.addBook(new Book("1984", "George Orwell"));
+        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee"));
+        library.addMember(new Member("John Doe"));
+        
+        library.displayBooks();
+    }
+}
+</member></book></code></pre> 
+    <p class="output">Output: Books in the library: Title: 1984, Author: George Orwell; Title: To Kill a Mockingbird, Author: Harper Lee</p> 
+</div>
+
+
+</body></html>
